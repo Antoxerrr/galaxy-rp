@@ -1,0 +1,33 @@
+{
+  "name": "galaxy-rp",
+  "version": "1.0.0",
+  "description": "GTA V Galaxy-RP Server",
+  "main": "server.exe",
+  "scripts": {
+    "build": "concurrently \"npm run build:client\" \"npm run build:server\"",
+    "watch": "concurrently \"npm run watch:client\" \"npm run watch:server\"",
+    "watch:server": "parcel watch src/server/index.js --out-dir ../packages/galaxy --target node",
+    "watch:client": "parcel watch src/client/index.js --out-dir ../client_packages/galaxy --target node",
+    "build:server": "parcel build src/server/index.js --no-minify --out-dir ../packages/galaxy --target node",
+    "build:client": "parcel build src/client/index.js --no-minify --out-dir ../client_packages/galaxy --target node",
+    "production": "concurrently \"parcel build src/client/index.js --out-dir ../client_packages/client --target node --no-source-maps\" \"parcel build src/server/index.js --no-minify --out-dir ../packages/galaxy --target node\" \"cross-env NODE_ENV=development webpack --progress\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antoxerrr/galaxy-rp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antoxerrr/galaxy-rp/issues"
+  },
+  "homepage": "https://github.com/Antoxerrr/galaxy-rp#readme",
+  "devDependencies": {
+    "@types/ragemp-c": "github:CocaColaBear/types-ragemp-c#master",
+    "@types/ragemp-s": "github:CocaColaBear/types-ragemp-s#master",
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
