@@ -21,3 +21,13 @@ mp.events.addCommand('veh', (player, _, vehName) => {
         player.vehicle = mp.vehicles.new(mp.joaat(vehName), pos);
     }
 });
+
+mp.events.addCommand('skin', (player, _, skinName) => {
+    let defaultSkin = 'a_m_m_afriamer_01';
+
+    if (!skinName) {
+        skinName = defaultSkin;
+    }
+
+    player.model = mp.joaat(skinName);
+});
