@@ -1,2 +1,2 @@
-require('./commands.js');
-require('./events.js');
+require('./common/commands.js');
+require('./player/auth/auth.js');

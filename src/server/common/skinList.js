@@ -1,7 +1,7 @@
 /**
  * Список скинов НПС
  */
-const skinList = [
+export const skinList = [
     'a_c_boar',
     'a_c_cat_01',
     'a_c_chickenhawk',
@@ -742,5 +742,3 @@ const skinList = [
     'u_m_y_tattoo_01',
     'u_m_y_zombie_01',
 ];
-
-export default skinList;
