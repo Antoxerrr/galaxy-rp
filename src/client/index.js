@@ -1,1 +1,2 @@
-require('./test.js')
+import './defaultHud.js'
+import './auth.js'

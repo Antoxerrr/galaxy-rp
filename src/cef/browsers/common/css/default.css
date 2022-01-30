@@ -1,0 +1,11 @@
+/* Важно, в ином случае постоянно будет спавнить скролл */
+html {
+    overflow-y: auto !important;
+}
+/*
+В нашем случае это должен быть дефолт,
+так как интерфейсы не всегда будут на весь экран.
+*/
+.theme--light.v-application {
+    background: transparent !important;
+}
